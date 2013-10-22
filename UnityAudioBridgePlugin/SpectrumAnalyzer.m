@@ -1,3 +1,7 @@
+// Realtime FFT spectrum and octave-band analysis.
+// by Keijiro Takahashi, 2013
+// https://github.com/keijiro/AudioSpectrum
+
 #import "SpectrumAnalyzer.h"
 #import "AudioInputBuffer.h"
 
