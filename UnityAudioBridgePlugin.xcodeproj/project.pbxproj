@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0F66F55E1814FF75007F6F62 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F66F55D1814FF75007F6F62 /* CoreFoundation.framework */; };
 		0F66F5641814FF75007F6F62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F66F5621814FF75007F6F62 /* InfoPlist.strings */; };
+		0F66F56D1814FFAB007F6F62 /* PluginEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F66F56B1814FFAB007F6F62 /* PluginEntry.m */; };
+		0F66F5721815034C007F6F62 /* AudioInputBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F66F56F1815034C007F6F62 /* AudioInputBuffer.m */; };
+		0F66F5731815034C007F6F62 /* SpectrumAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F66F5711815034C007F6F62 /* SpectrumAnalyzer.m */; };
+		0F66F57718150377007F6F62 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F66F57618150377007F6F62 /* Accelerate.framework */; };
+		0FC2BDF618165DE800A3B285 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC2BDF518165DE800A3B285 /* AudioUnit.framework */; };
+		0FC2BDF818165DEE00A3B285 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC2BDF718165DEE00A3B285 /* CoreAudio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +23,15 @@
 		0F66F5611814FF75007F6F62 /* UnityAudioBridgePlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnityAudioBridgePlugin-Info.plist"; sourceTree = "<group>"; };
 		0F66F5631814FF75007F6F62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F66F5651814FF75007F6F62 /* UnityAudioBridgePlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnityAudioBridgePlugin-Prefix.pch"; sourceTree = "<group>"; };
+		0F66F56B1814FFAB007F6F62 /* PluginEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginEntry.m; sourceTree = "<group>"; };
+		0F66F56E1815034C007F6F62 /* AudioInputBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioInputBuffer.h; sourceTree = "<group>"; };
+		0F66F56F1815034C007F6F62 /* AudioInputBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioInputBuffer.m; sourceTree = "<group>"; };
+		0F66F5701815034C007F6F62 /* SpectrumAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectrumAnalyzer.h; sourceTree = "<group>"; };
+		0F66F5711815034C007F6F62 /* SpectrumAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpectrumAnalyzer.m; sourceTree = "<group>"; };
+		0F66F5741815036D007F6F62 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0F66F57618150377007F6F62 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0FC2BDF518165DE800A3B285 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		0FC2BDF718165DEE00A3B285 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC2BDF818165DEE00A3B285 /* CoreAudio.framework in Frameworks */,
+				0FC2BDF618165DE800A3B285 /* AudioUnit.framework in Frameworks */,
+				0F66F57718150377007F6F62 /* Accelerate.framework in Frameworks */,
 				0F66F55E1814FF75007F6F62 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +69,10 @@
 		0F66F55C1814FF75007F6F62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0FC2BDF718165DEE00A3B285 /* CoreAudio.framework */,
+				0FC2BDF518165DE800A3B285 /* AudioUnit.framework */,
+				0F66F57618150377007F6F62 /* Accelerate.framework */,
+				0F66F5741815036D007F6F62 /* AudioToolbox.framework */,
 				0F66F55D1814FF75007F6F62 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
@@ -67,9 +89,14 @@
 		0F66F5601814FF75007F6F62 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F66F56E1815034C007F6F62 /* AudioInputBuffer.h */,
+				0F66F56F1815034C007F6F62 /* AudioInputBuffer.m */,
+				0F66F5701815034C007F6F62 /* SpectrumAnalyzer.h */,
+				0F66F5711815034C007F6F62 /* SpectrumAnalyzer.m */,
 				0F66F5611814FF75007F6F62 /* UnityAudioBridgePlugin-Info.plist */,
 				0F66F5621814FF75007F6F62 /* InfoPlist.strings */,
 				0F66F5651814FF75007F6F62 /* UnityAudioBridgePlugin-Prefix.pch */,
+				0F66F56B1814FFAB007F6F62 /* PluginEntry.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -136,6 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F66F56D1814FFAB007F6F62 /* PluginEntry.m in Sources */,
+				0F66F5721815034C007F6F62 /* AudioInputBuffer.m in Sources */,
+				0F66F5731815034C007F6F62 /* SpectrumAnalyzer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,9 +187,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -194,9 +225,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -266,6 +298,7 @@
 				0F66F56A1814FF75007F6F62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
