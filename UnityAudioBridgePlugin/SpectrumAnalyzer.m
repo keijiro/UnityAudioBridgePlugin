@@ -23,10 +23,12 @@ static Float32 bandwidthForBands[] = {
 
 @implementation SpectrumAnalyzer
 
+#if ! __has_feature(objc_arc)
 @synthesize pointNumber = _pointNumber;
 @synthesize bandType = _bandType;
 @synthesize spectrum = _spectrum;
 @synthesize bandLevels = _bandLevels;
+#endif
 
 #pragma mark Constructor / Destructor
 
@@ -45,7 +47,9 @@ static Float32 bandwidthForBands[] = {
 {
     self.pointNumber = 0;
     free(_bandLevels);
+#if ! __has_feature(objc_arc)
     [super dealloc];
+#endif
 }
 
 #pragma mark Custom accessors

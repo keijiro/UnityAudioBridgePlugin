@@ -28,7 +28,6 @@
 		0F66F56F1815034C007F6F62 /* AudioInputBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioInputBuffer.m; sourceTree = "<group>"; };
 		0F66F5701815034C007F6F62 /* SpectrumAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectrumAnalyzer.h; sourceTree = "<group>"; };
 		0F66F5711815034C007F6F62 /* SpectrumAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpectrumAnalyzer.m; sourceTree = "<group>"; };
-		0F66F5741815036D007F6F62 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0F66F57618150377007F6F62 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0FC2BDF518165DE800A3B285 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		0FC2BDF718165DEE00A3B285 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -72,7 +71,6 @@
 				0FC2BDF718165DEE00A3B285 /* CoreAudio.framework */,
 				0FC2BDF518165DE800A3B285 /* AudioUnit.framework */,
 				0F66F57618150377007F6F62 /* Accelerate.framework */,
-				0F66F5741815036D007F6F62 /* AudioToolbox.framework */,
 				0F66F55D1814FF75007F6F62 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
