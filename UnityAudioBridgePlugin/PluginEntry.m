@@ -45,7 +45,7 @@ int UnityAudioBridge_Update(struct SharedObject *shared)
         shared->bandLevels[i] = bandLevels[i];
     }
     for (; i < 32; i++) {
-        shared->bandLevels[i] = -1.0f;
+        shared->bandLevels[i] = 1.0f;
     }
     
     return 0;
