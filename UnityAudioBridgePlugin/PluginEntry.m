@@ -1,5 +1,6 @@
-// Unity Audio Bridge Plug-in / the entry point
+// Unity Audio Bridge Plug-in / The entry point
 // By Keijiro Takahashi, 2013
+// https://github.com/keijiro/unity-audiobridge
 
 #import "AudioInputBuffer.h"
 #import "SpectrumAnalyzer.h"
