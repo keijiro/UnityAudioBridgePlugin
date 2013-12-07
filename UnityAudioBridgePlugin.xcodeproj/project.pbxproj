@@ -79,6 +79,11 @@
 		0F66F55F1814FF75007F6F62 /* UnityAudioBridgePlugin */ = {
 			isa = PBXGroup;
 			children = (
+				0F66F56E1815034C007F6F62 /* AudioInputBuffer.h */,
+				0F66F56F1815034C007F6F62 /* AudioInputBuffer.m */,
+				0F66F56B1814FFAB007F6F62 /* PluginEntry.m */,
+				0F66F5701815034C007F6F62 /* SpectrumAnalyzer.h */,
+				0F66F5711815034C007F6F62 /* SpectrumAnalyzer.m */,
 				0F66F5601814FF75007F6F62 /* Supporting Files */,
 			);
 			path = UnityAudioBridgePlugin;
@@ -87,14 +92,9 @@
 		0F66F5601814FF75007F6F62 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F66F56E1815034C007F6F62 /* AudioInputBuffer.h */,
-				0F66F56F1815034C007F6F62 /* AudioInputBuffer.m */,
-				0F66F5701815034C007F6F62 /* SpectrumAnalyzer.h */,
-				0F66F5711815034C007F6F62 /* SpectrumAnalyzer.m */,
 				0F66F5611814FF75007F6F62 /* UnityAudioBridgePlugin-Info.plist */,
 				0F66F5621814FF75007F6F62 /* InfoPlist.strings */,
 				0F66F5651814FF75007F6F62 /* UnityAudioBridgePlugin-Prefix.pch */,
-				0F66F56B1814FFAB007F6F62 /* PluginEntry.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
